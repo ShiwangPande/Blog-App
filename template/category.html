@@ -1,4 +1,4 @@
-{%extends 'base.html'%} {%block title%} Welcome to blogs {%endblock%} {%block content%}
+{% extends 'base.html'%} {% block title%} Welcome to blogs {% endblock%} {% block content%}
 
 <div class="container-custom">
   <h3>{{cat.title}}</h3>
@@ -11,12 +11,12 @@
     />
   </div>
   <div class="collection">
-    {%for p in post%}
+    {% for p in post%}
     <a href="/blog/{{p.url}}" class="collection-item">{{p.title}}</a>
-    {%empty%}
+    {% empty%}
     <h3>No post in this category</h3>
-    {%endfor%}
+    {% endfor%}
   </div>
 </div>
 
-{%endblock%}
+{% endblock%}
